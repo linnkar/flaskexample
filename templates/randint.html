@@ -1,0 +1,26 @@
+<html>
+   <body>
+      <h1>Dice Roll</h1>
+      <p>You rolled {{dice_roll}}</p>
+      {% for item in category %}
+         <label>
+         <input type="checkbox" id="id_{{item.category}}" value="{{item.category}}"
+         {% if item.category == "Cat1" %}checked{% endif %}>
+         {{item.text}}</input>
+         </label>
+      {%endfor%}
+      <p>
+         <h2>Saved</h2>
+         <form action="" method=post>
+         {% for item in category %}
+            <label>
+            <input type="checkbox" id="id_{{item.category}}" name="dispute" value="{{item}}"
+               {% if item in saved %}checked{% endif %}>
+              {{item.text}}</input>
+            </label>
+         {%endfor%}
+         <input type="submit" value="Valittu"/>
+         </form>
+      </p>
+   </body>
+</html>
