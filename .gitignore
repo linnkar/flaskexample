@@ -5,4 +5,5 @@ lib/*
 local/*
 share/*
 help.txt
+*.pyc
 
